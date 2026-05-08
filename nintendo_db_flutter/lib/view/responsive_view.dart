@@ -69,9 +69,21 @@ class _ResponsiveViewState extends State<ResponsiveView> {
     if (mobileState == MobileViewState.categories) {
       return ListView(
         children: [
-          ListTile(title: const Text("Personajes"), onTap: () => _selectCategory("Personajes")),
-          ListTile(title: const Text("Consolas"), onTap: () => _selectCategory("Consolas")),
-          ListTile(title: const Text("Juegos"), onTap: () => _selectCategory("Juegos")),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text("Personajes"), 
+            onTap: () => _selectCategory("Personajes")
+          ),
+          ListTile(
+            leading: const Icon(Icons.videogame_asset),
+            title: const Text("Consolas"), 
+            onTap: () => _selectCategory("Consolas")
+          ),
+          ListTile(
+            leading: const Icon(Icons.sports_esports),
+            title: const Text("Juegos"), 
+            onTap: () => _selectCategory("Juegos")
+          ),
         ],
       );
     }
@@ -136,7 +148,12 @@ class _ResponsiveViewState extends State<ResponsiveView> {
         final isSelected = selectedItem == item;
         return ListTile(
           selected: isSelected,
-          leading: Image.asset("assets/${item["image"]}", width: 40, errorBuilder: (c, e, s) => const Icon(Icons.gamepad)),
+          // CORRECCIÓN: Ruta a la subcarpeta de imágenes
+          leading: Image.asset(
+            "assets/data/images/${item["image"]}", 
+            width: 40, 
+            errorBuilder: (c, e, s) => const Icon(Icons.broken_image)
+          ),
           title: Text(item["name"]),
           onTap: () {
             if (MediaQuery.of(context).size.width <= 600) {
@@ -182,27 +199,55 @@ class DetailContent extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Image.asset("assets/${item["image"]}", height: 250, fit: BoxFit.contain, errorBuilder: (c, e, s) => const Icon(Icons.image_not_supported, size: 100)),
+            // CORRECCIÓN: Ruta a la subcarpeta de imágenes
+            Image.asset(
+              "assets/data/images/${item["image"]}", 
+              height: 250, 
+              fit: BoxFit.contain, 
+              errorBuilder: (c, e, s) => const Icon(Icons.image_not_supported, size: 100)
+            ),
             const SizedBox(height: 20),
             Text(item["name"], style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
+            
             if (category == "Personajes") ...[
               Text("Juego Original: ${item["game"]}", style: const TextStyle(fontSize: 18)),
-              Chip(label: Text("Color: ${item["color"]}"), backgroundColor: Colors.red.shade100),
+              const SizedBox(height: 10),
+              Chip(
+                label: Text("Color: ${item["color"]}"), 
+                backgroundColor: _getCategoryColor(item["color"]),
+              ),
             ],
+            
             if (category == "Consolas") ...[
-              Text("Lanzamiento: ${item["date"]}"),
+              Text("Lanzamiento: ${item["date"]}", style: const TextStyle(fontSize: 18)),
               Text("Procesador: ${item["procesador"]}"),
               Text("Unidades vendidas: ${item["units_sold"]}"),
             ],
+            
             if (category == "Juegos") ...[
               Text("${item["type"]} (${item["year"]})", style: const TextStyle(fontStyle: FontStyle.italic)),
               const SizedBox(height: 15),
-              Text(item["plot"], textAlign: TextAlign.justify, style: const TextStyle(fontSize: 16)),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(item["plot"], textAlign: TextAlign.justify, style: const TextStyle(fontSize: 16)),
+              ),
             ],
           ],
         ),
       ),
     );
+  }
+
+  Color _getCategoryColor(String? colorName) {
+    switch (colorName?.toLowerCase()) {
+      case 'red': return Colors.red.shade100;
+      case 'green': return Colors.green.shade100;
+      case 'pink': return Colors.pink.shade100;
+      case 'orange': return Colors.orange.shade100;
+      case 'yellow': return Colors.yellow.shade100;
+      case 'brown': return Colors.brown.shade100;
+      default: return Colors.blueGrey.shade100;
+    }
   }
 }

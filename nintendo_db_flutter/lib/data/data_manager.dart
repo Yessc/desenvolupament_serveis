@@ -7,9 +7,10 @@ class DataManager {
   List<dynamic> games = [];
 
   Future<void> loadData() async {
-    final rawCharacters = await rootBundle.loadString("assets/characters.json");
-    final rawConsoles = await rootBundle.loadString("assets/consoles.json");
-    final rawGames = await rootBundle.loadString("assets/games.json");
+   
+    final rawCharacters = await rootBundle.loadString("assets/data/characters.json");
+    final rawConsoles = await rootBundle.loadString("assets/data/consoles.json");
+    final rawGames = await rootBundle.loadString("assets/data/games.json");
 
     characters = jsonDecode(rawCharacters);
     consoles = jsonDecode(rawConsoles);
