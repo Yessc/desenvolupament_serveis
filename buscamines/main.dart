@@ -17,13 +17,13 @@ class Buscamines {
     (_) => List.generate(columnas, (_) => '·'),
   );
 
-  // Donde están las minas
+
   List<List<bool>> minas = List.generate(
     filas,
     (_) => List.generate(columnas, (_) => false),
   );
 
-  // Casillas destapadas
+
   List<List<bool>> destapadas = List.generate(
     filas,
     (_) => List.generate(columnas, (_) => false),
@@ -146,8 +146,8 @@ class Buscamines {
 
   // Destapar casillas recursivamente
   void _destapar(int f, int c) {
-    if (f < 0 || f >= filas || c < 0 || c >= columnas) return;
-    if (destapadas[f][c] || tablero[f][c] == '#') return;
+    if (f < 0 || f >= filas || c < 0 || c >= columnas) return; /
+    if (destapadas[f][c] || tablero[f][c] == '#') return;// destapada #bandera?
 
     destapadas[f][c] = true;
 
@@ -172,7 +172,7 @@ class Buscamines {
     if (minasAlrededor == 0) {
       for (int i = -1; i <= 1; i++) {
         for (int j = -1; j <= 1; j++) {
-          if (i != 0 || j != 0) _destapar(f + i, c + j);
+          if (i != 0 || j != 0) _destapar(f + i, c + j); 
         }
       }
     }

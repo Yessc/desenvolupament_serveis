@@ -1,0 +1,483 @@
+{
+  "name": "royal",
+  "description": "",
+  "levels": [
+    {
+      "name": "Battle",
+      "description": "",
+      "gameplayData": "",
+      "layers": [
+        {
+          "name": "Decoraciones",
+          "gameplayData": "",
+          "x": 0,
+          "y": 0,
+          "depth": 0.0,
+          "tilesSheetFile": "media/TX Plant.png",
+          "tilesWidth": 25,
+          "tilesHeight": 30,
+          "visible": true,
+          "groupId": "__main__",
+          "tileMapFile": "tilemaps/level_000_layer_000.json"
+        },
+        {
+          "name": "Objetos",
+          "gameplayData": "",
+          "x": 0,
+          "y": 0,
+          "depth": 0.0,
+          "tilesSheetFile": "media/TX Props.png",
+          "tilesWidth": 32,
+          "tilesHeight": 20,
+          "visible": true,
+          "groupId": "__main__",
+          "tileMapFile": "tilemaps/level_000_layer_001.json"
+        },
+        {
+          "name": "Paredes",
+          "gameplayData": "",
+          "x": 0,
+          "y": 0,
+          "depth": 0.0,
+          "tilesSheetFile": "media/TX Struct.png",
+          "tilesWidth": 32,
+          "tilesHeight": 32,
+          "visible": true,
+          "groupId": "__main__",
+          "tileMapFile": "tilemaps/level_000_layer_002.json"
+        },
+        {
+          "name": "suelo",
+          "gameplayData": "",
+          "x": 0,
+          "y": 0,
+          "depth": 0.0,
+          "tilesSheetFile": "media/TX Tileset Grass.png",
+          "tilesWidth": 32,
+          "tilesHeight": 32,
+          "visible": true,
+          "groupId": "__main__",
+          "tileMapFile": "tilemaps/level_000_layer_003.json"
+        }
+      ],
+      "layerGroups": [
+        {
+          "id": "__main__",
+          "name": "Main",
+          "collapsed": false
+        }
+      ],
+      "sprites": [
+        {
+          "name": "Player",
+          "gameplayData": "",
+          "type": "Player",
+          "animationId": "anim_1778326595378398",
+          "x": 20,
+          "y": 20,
+          "width": 30,
+          "height": 33,
+          "imageFile": "media/players blue x1.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Gema",
+          "gameplayData": "",
+          "type": "Gema",
+          "animationId": "anim_1778339934438461",
+          "x": 128,
+          "y": 384,
+          "width": 15,
+          "height": 14,
+          "imageFile": "media/gem.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Gema",
+          "gameplayData": "",
+          "type": "Gema",
+          "animationId": "anim_1778339934438461",
+          "x": 260,
+          "y": 100,
+          "width": 15,
+          "height": 14,
+          "imageFile": "media/gem.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Gema",
+          "gameplayData": "",
+          "type": "Gema",
+          "animationId": "anim_1778339934438461",
+          "x": 920,
+          "y": 520,
+          "width": 15,
+          "height": 14,
+          "imageFile": "media/gem.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Gema",
+          "gameplayData": "",
+          "type": "Gema",
+          "animationId": "anim_1778339934438461",
+          "x": 550,
+          "y": 900,
+          "width": 15,
+          "height": 14,
+          "imageFile": "media/gem.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Tank_r",
+          "gameplayData": "",
+          "type": "Tank_r",
+          "animationId": "anim_1778403056233463",
+          "x": 500,
+          "y": 384,
+          "width": 64,
+          "height": 64,
+          "imageFile": "media/tankblue.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Tank_r",
+          "gameplayData": "",
+          "type": "Tank_r",
+          "animationId": "anim_1778403056233463",
+          "x": 181,
+          "y": 200,
+          "width": 64,
+          "height": 64,
+          "imageFile": "media/tankblue.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Tank_r",
+          "gameplayData": "",
+          "type": "Tank_r",
+          "animationId": "anim_1778403056233463",
+          "x": 256,
+          "y": 898,
+          "width": 64,
+          "height": 64,
+          "imageFile": "media/tankblue.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Tank_l",
+          "gameplayData": "",
+          "type": "Tank_l",
+          "animationId": "anim_1778403794136276",
+          "x": 900,
+          "y": 300,
+          "width": 70,
+          "height": 60,
+          "imageFile": "media/left_move_blue-Sheet.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "Tank_l",
+          "gameplayData": "",
+          "type": "Tank_l",
+          "animationId": "anim_1778403794136276",
+          "x": 896,
+          "y": 700,
+          "width": 70,
+          "height": 60,
+          "imageFile": "media/left_move_blue-Sheet.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        },
+        {
+          "name": "player shot",
+          "gameplayData": "",
+          "type": "player shot",
+          "animationId": "anim_1778326595378398",
+          "x": 150,
+          "y": 150,
+          "width": 30,
+          "height": 33,
+          "imageFile": "media/players blue x1.png",
+          "flipX": false,
+          "flipY": false,
+          "depth": 0.0,
+          "groupId": "__main__"
+        }
+      ],
+      "spriteGroups": [
+        {
+          "id": "__main__",
+          "name": "Main",
+          "collapsed": false
+        }
+      ],
+      "groupId": "__main__",
+      "viewportWidth": 320,
+      "viewportHeight": 180,
+      "viewportX": 0,
+      "viewportY": 0,
+      "viewportAdaptation": "letterbox",
+      "viewportInitialColor": "green",
+      "viewportPreviewColor": "blue",
+      "backgroundColorHex": "#DDCE92",
+      "depthSensitivity": 0.08,
+      "zonesFile": "zones/level_000_zones.json",
+      "pathsFile": "paths/level_000_paths.json"
+    }
+  ],
+  "levelGroups": [
+    {
+      "id": "__main__",
+      "name": "Main",
+      "collapsed": false
+    }
+  ],
+  "mediaAssets": [
+    {
+      "name": "maquina",
+      "fileName": "media/kindpng_2501781.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 615,
+      "tileHeight": 688,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Scene Overview",
+      "fileName": "media/Scene Overview.png",
+      "mediaType": "tileset",
+      "tileWidth": 1200,
+      "tileHeight": 1200,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "personaje_walk",
+      "fileName": "media/walk.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 40,
+      "tileHeight": 42,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "plantas",
+      "fileName": "media/TX Plant.png",
+      "mediaType": "tileset",
+      "tileWidth": 25,
+      "tileHeight": 30,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "suelo",
+      "fileName": "media/TX Tileset Grass.png",
+      "mediaType": "tileset",
+      "tileWidth": 32,
+      "tileHeight": 32,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "objetos",
+      "fileName": "media/TX Props.png",
+      "mediaType": "tileset",
+      "tileWidth": 32,
+      "tileHeight": 20,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "muros",
+      "fileName": "media/TX Struct.png",
+      "mediaType": "tileset",
+      "tileWidth": 32,
+      "tileHeight": 32,
+      "selectionColorHex": "#FF9500",
+      "groupId": "__main__"
+    },
+    {
+      "name": "players blue x1",
+      "fileName": "media/players blue x1.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 30,
+      "tileHeight": 33,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "players blue x2",
+      "fileName": "media/players blue x2.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 512,
+      "tileHeight": 832,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "gem",
+      "fileName": "media/gem.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 15,
+      "tileHeight": 14,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "tankblue",
+      "fileName": "media/tankblue.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 64,
+      "tileHeight": 64,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "right_move_blue-Sheet",
+      "fileName": "media/right_move_blue-Sheet.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 70,
+      "tileHeight": 60,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "left_move_blue-Sheet",
+      "fileName": "media/left_move_blue-Sheet.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 70,
+      "tileHeight": 60,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "vida",
+      "fileName": "media/ui x1.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 32,
+      "tileHeight": 30,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "BOM.BUM",
+      "fileName": "media/BOM.BUM.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 100,
+      "tileHeight": 100,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Bom_fin",
+      "fileName": "media/l0_sprite_24.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 512,
+      "tileHeight": 512,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Bom_explota",
+      "fileName": "media/l0_sprite_12.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 512,
+      "tileHeight": 512,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    },
+    {
+      "name": "FireGun_Burnt",
+      "fileName": "media/FireGun_Burnt.png",
+      "mediaType": "spritesheet",
+      "tileWidth": 80,
+      "tileHeight": 40,
+      "selectionColorHex": "#FFCC00",
+      "groupId": "__main__"
+    }
+  ],
+  "mediaGroups": [
+    {
+      "id": "__main__",
+      "name": "Main",
+      "collapsed": false
+    }
+  ],
+  "zoneTypes": [
+    {
+      "name": "Plantas",
+      "color": "blue"
+    },
+    {
+      "name": "suelo",
+      "color": "red"
+    },
+    {
+      "name": "muros",
+      "color": "amber"
+    },
+    {
+      "name": "bombas",
+      "color": "green"
+    },
+    {
+      "name": "Category 5",
+      "color": "purple"
+    },
+    {
+      "name": "Category 6",
+      "color": "pink"
+    },
+    {
+      "name": "Category 7",
+      "color": "red"
+    },
+    {
+      "name": "Category 8",
+      "color": "red"
+    },
+    {
+      "name": "Category 9",
+      "color": "red"
+    },
+    {
+      "name": "Category 10",
+      "color": "red"
+    },
+    {
+      "name": "Category 11",
+      "color": "red"
+    }
+  ],
+  "animationsFile": "animations/animations.json"
+}

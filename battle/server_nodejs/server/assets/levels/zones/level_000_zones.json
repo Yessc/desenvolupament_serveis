@@ -1,0 +1,66 @@
+{
+  "zoneGroups": [
+    {
+      "id": "__main__",
+      "name": "Main",
+      "collapsed": false
+    }
+  ],
+  "zones": [
+    {
+      "name": "Plantas",
+      "type": "Plantas",
+      "gameplayData": "",
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50,
+      "color": "blue",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Objetos",
+      "type": "Category 5",
+      "gameplayData": "",
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50,
+      "color": "purple",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Suelo",
+      "type": "suelo",
+      "gameplayData": "",
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50,
+      "color": "red",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Muros",
+      "type": "muros",
+      "gameplayData": "",
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50,
+      "color": "amber",
+      "groupId": "__main__"
+    },
+    {
+      "name": "Segura",
+      "type": "Plantas",
+      "gameplayData": "",
+      "x": 0,
+      "y": 0,
+      "width": 50,
+      "height": 50,
+      "color": "blue",
+      "groupId": "__main__"
+    }
+  ]
+}

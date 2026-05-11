@@ -6,7 +6,9 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class Main {
 
-    // Guarda els resultats parcials de cada microservei (thread-safe)
+    // Guarda els resultats parcials de cada microservei (thread-safe) puedo meter
+    // muchos datos a la vez
+
     private static final ConcurrentHashMap<Integer, Integer> resultats = new ConcurrentHashMap<>();
 
     // Per calcular el temps total d'execució
@@ -16,21 +18,21 @@ public class Main {
 
         inici.set(System.nanoTime());
 
-        // Barrera que espera 3 microserveis
+        // sincronizo las 3 tareas por cycle
         CyclicBarrier barrera = new CyclicBarrier(3, () -> {
             System.out.println("\n=== Tots els microserveis han finalitzat ===");
             combinarResultats();
         });
 
-        // Pool amb 3 fils
+        // sabe que va a recibir 3 tareas
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        // Llançament dels microserveis
+        // envio las tareas
         for (int i = 1; i <= 3; i++) {
             executor.submit(crearMicroservei(i, barrera));
         }
 
-        // Tancament controlat
+        // aqui ya no acepto tares
         executor.shutdown();
         try {
             if (!executor.awaitTermination(15, TimeUnit.SECONDS)) {
@@ -42,15 +44,8 @@ public class Main {
         }
     }
 
-    /**
-     * Crea un microservei simulat com a Runnable.
-     * Cada microservei:
-     * 1. Espera un temps aleatori inicial
-     * 2. Processa dades
-     * 3. Genera un resultat parcial
-     * 4. Espera a la barrera
-     */
-    private static Runnable crearMicroservei(int id, CyclicBarrier barrera) {
+    private static Runnable crearMicroservei(int id, CyclicBarrier barrera) { // runable accion que ejecuta los cycle
+                                                                              // cuando llegan todos
 
         return () -> {
             try {
@@ -80,7 +75,7 @@ public class Main {
                 System.out.println("Microservei " + id +
                         " finalitzat. Resultat parcial = " + parcial);
 
-                // Espera fins que tots arribin
+                // aqui espera cada hilo que todos lleguen
                 barrera.await();
 
             } catch (InterruptedException | BrokenBarrierException e) {

@@ -9,7 +9,7 @@ public class Main {
     // Conjunt gran de dades (simulat)
     private static final double[] dades = new double[1000];
 
-    // Resultats compartits (thread-safe)
+    // (thread-safe)
     private static final AtomicReference<Double> suma = new AtomicReference<>(0.0);
     private static final AtomicReference<Double> mitjana = new AtomicReference<>(0.0);
     private static final AtomicReference<Double> desviacio = new AtomicReference<>(0.0);
@@ -42,7 +42,6 @@ public class Main {
         }
     }
 
-    // 🔹 Tasca 1: Càlcul de la suma
     private static Runnable calculSuma(CyclicBarrier barrera) {
         return () -> {
             try {
@@ -57,7 +56,6 @@ public class Main {
         };
     }
 
-    // 🔹 Tasca 2: Càlcul de la mitjana
     private static Runnable calculMitjana(CyclicBarrier barrera) {
         return () -> {
             try {
@@ -72,7 +70,6 @@ public class Main {
         };
     }
 
-    // 🔹 Tasca 3: Càlcul de la desviació estàndard
     private static Runnable calculDesviacio(CyclicBarrier barrera) {
         return () -> {
             try {

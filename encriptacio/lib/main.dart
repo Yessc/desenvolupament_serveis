@@ -121,7 +121,7 @@ class _SeccioOperacioState extends State<SeccioOperacio> {
     super.initState();
     if (!widget.esXifrat) {
       String home = Platform.environment['HOME'] ?? '';
-      clauPath = '$home/.ssh/id_rsa';
+      clauPath = '$home/.ssh/clau_privada.pem';
     }
   }
 
@@ -143,7 +143,7 @@ class _SeccioOperacioState extends State<SeccioOperacio> {
       final bytesEntrada = File(arxiuInPath).readAsBytesSync();
 
       if (widget.esXifrat) {
-        // LÓGICA ENCRIPTAR POR BLOQUES
+        //--encriptar proceso archivo en trozos de 200bytes y convierto cada trozo en un bloque ilegible y lo guardo como .enc
         final clauPub = parser.parse(clauString) as rsa.RSAPublicKey;
         final encriptador = enc.Encrypter(enc.RSA(publicKey: clauPub));
         List<int> result = [];
@@ -158,7 +158,7 @@ class _SeccioOperacioState extends State<SeccioOperacio> {
         File('$arxiuInPath.enc').writeAsBytesSync(result);
         _notificar('Arxiu encriptat!', Colors.green);
       } else {
-        // LÓGICA DESENCRIPTAR POR BLOQUES
+        // ---desincreptar el programa lee los bloques del archivo cifrado  y los traduce de vuelta y cre un .desc
         final clauPriv = parser.parse(clauString) as rsa.RSAPrivateKey;
         final encriptador = enc.Encrypter(enc.RSA(privateKey: clauPriv));
         List<int> result = [];
